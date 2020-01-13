@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright © 2018; Brasil; By Brenno Campos Garcia; Todos os direitos reservados
+    Copyright © 2018; Brazil; By Brenno Campos Garcia; All rights reserved
+
+-->
+<odoo>
+    <!-- Product inherit -->
+    <record id="product_template_form_view_inherit" model="ir.ui.view">
+        <field name="name">product.template.common.form.extension</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[1]" position="after">
+                <page name="ghm_page" string="Informações da GHM">
+                    <div>
+                        <div string="Nomes">
+                            <label for="name_english_ghm"/>
+                            <field name="name_english_ghm" string="Nome em Inglês"/>
+                            <label for="name_french_ghm"/>
+                            <field name="name_french_ghm" string="Nome em Francês"/>
+                            <label for="name_spanish_ghm"/>
+                            <field name="name_spanish_ghm" string="Nome em Espanhol"/>
+                            <label for="name_portuguese_ghm"/>
+                            <field name="name_portuguese_ghm" string="Nome em Prtuguês"/>
+                            <separator/>
+                        </div>
+                        <div string="Outras Informações">
+                            <label for="typical_delivery_time_ghm"/>
+                            <field name="typical_delivery_time_ghm" string="Tempo de Entrega Típico"/>
+                            <label for="discount_group_ghm"/>
+                            <field name="discount_group_ghm" string="Grupo de Desconto"/>
+                            <label for="price_structure_group_ghm"/>
+                            <field name="price_structure_group_ghm" string="Grupo de Estrutura de Preço"/>
+                            <label for="release_for_processing_ghm"/>
+                            <field name="release_for_processing_ghm" string="Liberação para Processamento"/>
+                            <label for="goods_n_ghm"/>
+                            <field name="goods_n_ghm" string="Número do Recebimento"/>
+                            <label for="gtin_ghm"/>
+                            <field name="gtin_ghm" string="GTIN"/>
+                            <label for="max_qty_for_delivery_time"/>
+                            <field name="max_qty_for_delivery_time" string="Quantidade Máxima para o Tempo de Entrega"/>
+                            <label for="last_production_ghm"/>
+                            <field name="last_production_ghm" string="Última Produção"/>
+                            <label for="article_category"/>
+                            <field name="article_category" string="Categoria do Artigo"/>
+                        </div>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
